@@ -65,3 +65,6 @@ npm install -g @angular/cli
 
 - Open Project with Visual Studio Code
   - 開啟cmd `code .`
+  
+- 在Visual Studio Code中開啟Terminal
+  - `ctrl` + `~`
