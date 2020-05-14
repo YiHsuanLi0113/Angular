@@ -34,14 +34,20 @@ npm install -g @angular/cli
 ## 驗證Angular CLI
  
 - 建立demo1專案資料夾與Angular專案骨架
-  `ng new demo1 --routing --style css`
+  ```
+  ng new demo1 --routing --style css
+  ```
   - 這個過程會建立Angular專案檔案並自動安裝所有npm相依套件
 
 - 進入demo1目錄
-  `cd demo1`
+  ```
+  cd demo1
+  ```
   
 - 啟動Angular開發伺服器並自動開啟網頁(http://localhost:4200)
-  `ng serve --open`
+  ```
+  ng serve --open
+  ```
 
 ## 建立新專案
 
