@@ -60,6 +60,8 @@ npm install -g @angular/cli
      ```
      npm-windows-upgrade --npm-version latest
      ```
+- How to End `ng serve`
+  - `ctrl` + `C`
 
-
-
+- Open Project with Visual Studio Code
+  - 開啟cmd `code .`
