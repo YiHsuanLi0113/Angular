@@ -49,14 +49,17 @@ npm install -g @angular/cli
   ng serve --open
   ```
 
-## 建立新專案
+## 補充
 
-1. 開啟cmd，輸入指令
+- 如何將npm升級到最新版本
+  1. 安裝npm-windows-upgrade套件
+    ```
+    npm install --global --production npm-windows-upgrade
+    ```
+  2. 執行升級動作
+     ```
+     npm-windows-upgrade --npm-version latest
+     ```
 
- 注意：切換磁碟需輸入`/D`參數
-```
-C:\Users\em2542>>cd /D E:
-E:\>cd work\Practice\Angular //移至建立專案的位置
-```
 
 
