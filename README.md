@@ -30,6 +30,16 @@ npm install -g @angular/cli
   - 驗證安裝結果指令
     - `ng version`
       - 確認`9.0.5`以上版本
+- ※若出現如下錯誤
+  ```
+  npm ERR! code SELF_SIGNED_CERT_IN_CHAIN
+  npm ERR! self signed certificate in certificate chain
+  ```
+  則輸入
+  ```
+  npm set strict-ssl false
+  ```
+  即可正常安裝
       
 ## 驗證Angular CLI
  
