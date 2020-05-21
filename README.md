@@ -89,7 +89,10 @@ npm install -g @angular/cli
     npm ERR!     C:\Users\ez4577\AppData\Roaming\npm-cache\_logs\2020-05-20T10_13_48_699Z-debug.log
     PS D:\TeamProject\SKG建議書升級建置專案\Development\Source\AngularWeb>
     ```
-    
+    則輸入以下指令
+    ```
+    npm install --save-dev @angular-devkit/build-angular
+    ```
 
 ## 補充
 
