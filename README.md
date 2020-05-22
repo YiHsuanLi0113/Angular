@@ -90,9 +90,30 @@ npm install -g @angular/cli
     PS D:\TeamProject\SKG建議書升級建置專案\Development\Source\AngularWeb>
     ```
     則輸入以下指令
-    ```
-    npm install --save-dev @angular-devkit/build-angular
-    ```
+      - Delete node_module folder manually from local project directory
+      ```
+      npm rm -rf node_modules
+      ```
+      - Clean NPM cache
+      ```
+      npm cache clean --force
+      ```
+      - Re-install NPM packeages
+        - re-install npm both gloabally and local to project directory
+      ```
+      npm install -g npm@lastest
+      ```
+      ```
+      npm install
+      ```
+      - For any error, please run below command additionally if needed.
+      ```
+      npm install --save-dev @angular-devkit/build-angular
+      ```
+      ```
+      npm install --save-dev @angular/cli@latest
+      ```
+    參考網址：https://thecodebuzz.com/cannot-find-module-angular-devkit-build-angular-package-json/
 
 ## 補充
 
