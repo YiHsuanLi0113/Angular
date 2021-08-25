@@ -24,8 +24,12 @@ app.module.ts
 ```
 
 ※*將**Component**註冊到**Module**時是加在**NgModule**的**declaration**屬性中；**NgModule**要註冊到另一個**NgModule**時，則必須加到**import**屬性中。*
+ 
+ 
+***
 
-路由策略分為：
+
+### 路由策略
 - **PathLocationStrategy**
   - 為預設路由
   - 網址結構 `http://localhost:4200/dashboard/`
@@ -46,7 +50,7 @@ app.module.ts
   ```typescript
   1    @NgModule({
   2      imports: [RouterModule.forRoot(routes, {
-  3        useHash: true
+  3        useHash: true //使用HashLocationStrategy
   4      })],
   5      ...
   6   })
@@ -82,6 +86,24 @@ app-routing.module.ts
 `<router-outlet></router-outlet>`  
 我們可以將`<router-outlet>`看成**Component**的tag，因為Angular的路由機制運作結果會如同Component的tag，會以這個tag當作標記去插入指定的Component。
 
-#### 路由規則
+#### 加入路由規則
+
+- `path`：設定導覽的相對路徑
+- `component`：設定要載入的Component
+
+#### 啟用路由追蹤
+
+```typescript
+app-routing.module.ts
+
+1    @NgModule({
+2      imports: [RouterModule.forRoot(routes, {
+3        enableTracing: true //啟用路由追蹤
+4      })],
+5      exports: [RouterModule],
+6      providers: []
+7    })
+8    export class AppRoutingModule {}
+```
 
 
