@@ -25,8 +25,37 @@ app.module.ts
 
 ※*將**Component**註冊到**Module**時是加在**NgModule**的**declaration**屬性中；**NgModule**要註冊到另一個**NgModule**時，則必須加到**import**屬性中。*
 
+路由策略分為：
+- **PathLocationStrategy**
+  - 為預設路由
+  - 網址結構 `http://localhost:4200/dashboard/`
+  - 採用技術為[HTML5 History API](https://html.spec.whatwg.org/multipage/history.html#history)
+  - 注意事項
+    - 絕對網址 `https://domain/path/to/file?key=value`
+    - 相對網址 
+      -  `//domain/path/to/file?key=value` 相對於**目前通訊協定**的網址
+      -  `/path/to/file?key=value` 相對於**目前域名**的網址
+      -  `path/to/file?key=value` 相對於**目前路徑**的網址
+    - 基底網址
+      - 路由機制通常搭配HTML的`<base href="/">`進行宣告
+      - 設定於**src/index.html**網頁中
+      
+- **HashLocationStrategy**
+  - 網址結構 `http://localhost:4200/#/dashboard/`
+  - 採用技術為HTML4標準Hash網址格式
+  ```typescript
+  1    @NgModule({
+  2      imports: [RouterModule.forRoot(routes, {
+  3        useHash: true
+  4      })],
+  5      ...
+  6   })
+  ```
+
 開啟`src\app\app-routing.module.ts`可以發現裡面宣告了一個`routes`的陣列變數，讓我們可以加入多個路由規則，最後`RouterModule.forRoot(routes)`則是將此路由變數宣告為根路由。
 ```typescript
+app-routing.module.ts
+
 1    import { NgModule } from "@angular/core";
 2    import { Routes, RouterModule } from "@angular/router";
 3    
@@ -52,3 +81,7 @@ app.module.ts
 
 `<router-outlet></router-outlet>`  
 我們可以將`<router-outlet>`看成**Component**的tag，因為Angular的路由機制運作結果會如同Component的tag，會以這個tag當作標記去插入指定的Component。
+
+#### 路由規則
+
+
